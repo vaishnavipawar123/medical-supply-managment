@@ -1,0 +1,197 @@
+/*!
+ * Start Bootstrap - Clean Blog v5.0.8
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT
+ */
+
+/* Base Styles */
+body {
+    font-size: 20px;
+    color: #333; /* Darker color for better readability */
+    font-family: Lora, 'Times New Roman', serif;
+    line-height: 1.6; /* Increased line height for better readability */
+}
+
+p {
+    margin: 30px 0;
+}
+
+p a {
+    text-decoration: underline;
+    color: #0085a1; /* Link color */
+    transition: color 0.3s;
+}
+
+p a:hover {
+    color: #005f7f; /* Darker shade on hover */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+blockquote {
+    font-style: italic;
+    color: #868e96;
+    border-left: 5px solid #0085a1; /* Added left border for emphasis */
+    padding-left: 15px; /* Spacing from the border */
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 60px;
+    color: #0085a1; /* Section heading color */
+}
+
+/* Captions */
+.caption {
+    font-size: 14px;
+    font-style: italic;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px; /* Slightly rounded corners */
+    background-color: rgba(0, 133, 161, 0.1); /* Light background */
+}
+
+/* Navbar Styles */
+#mainNav {
+    position: absolute;
+    border-bottom: 1px solid #e9ecef;
+    background-color: #fff;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#mainNav .navbar-brand {
+    font-weight: 800;
+    color: #343a40;
+}
+
+#mainNav .navbar-toggler {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 13px;
+    text-transform: uppercase;
+    color: #343a40;
+}
+
+/* Navbar Responsive Styles */
+@media only screen and (min-width: 992px) {
+    #mainNav {
+        border-bottom: 1px solid transparent;
+        background: transparent;
+    }
+
+    #mainNav .navbar-brand,
+    #mainNav .navbar-nav > li.nav-item > a {
+        color: #fff;
+    }
+}
+
+/* Header Styles */
+header.masthead {
+    margin-bottom: 50px;
+    background: no-repeat center center;
+    background-color: #868e96;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover;
+}
+
+header.masthead .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(33, 37, 41, 0.5); /* Semi-transparent overlay */
+}
+
+header.masthead .page-heading,
+header.masthead .post-heading,
+header.masthead .site-heading {
+    padding: 200px 0 150px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+header.masthead .page-heading h1,
+header.masthead .site-heading h1 {
+    font-size: 50px;
+    margin-top: 0;
+}
+
+header.masthead .post-heading h1 {
+    font-size: 35px;
+}
+
+/* Post Preview Styles */
+.post-preview > a {
+    color: #212529;
+}
+
+.post-preview > a:hover {
+    text-decoration: none;
+    color: #0085a1;
+}
+
+/* Floating Label Styles */
+.floating-label-form-group {
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+    font-size: 1.5em;
+    border: none;
+    background: transparent;
+    transition: border-color 0.3s; /* Smooth transition */
+}
+
+.floating-label-form-group input:focus,
+.floating-label-form-group textarea:focus {
+    outline: none; /* Remove default outline */
+    border-bottom-color: #0085a1; /* Change border color on focus */
+}
+
+footer {
+    padding: 50px 0 65px;
+    background-color: #f8f9fa; /* Light footer background */
+    text-align: center; /* Centered text */
+}
+
+footer .copyright {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #6c757d; /* Lighter footer text */
+}
+
+/* Button Styles */
+.btn {
+    font-size: 14px;
+    font-weight: 800;
+    padding: 15px 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.btn-primary {
+    background-color: #0085a1;
+    border-color: #0085a1;
+}
+
+.btn-primary:hover {
+    background-color: #00657b; /* Darker on hover */
+    border-color: #005f7f; /* Darker border on hover */
+}

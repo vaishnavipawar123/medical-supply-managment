@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{url_for('static',filename='img/bg1.jpg')}});">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto text-center">
+                <div class="post-heading">
+                    <h1 style="font-size: 2.5rem; color: #fff;">View Details</h1>
+                    <h2 class="subheading" style="color: #dcdcdc;">Medical Records Details</h2>
+                    <span class="meta">
+                        <a href="#" style="color: #fff;"></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<div class="container mt-4">
+    <div class="text-center mb-4">
+        <a href="/sp" class="btn btn-danger btn-lg">Stored Details</a>
+        <h4 class="mt-2">Click here to view Recorded Information</h4>
+    </div>
+
+    <p style="font-size: 1.2rem;">Medical management information, date and timings stored over here:</p>
+    
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Mid</th>
+                <th>Actions</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+            <tr>
+                <td>{{ post.mid }}</td>
+                <td>{{ post.action }}</td>
+                <td>{{ post.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<hr>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/clean-blog.min.js"></script>
+
+{% endblock %}

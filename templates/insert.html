@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- Page Header -->
+<header class="masthead mb-0" style="background-image: url('{{url_for('static',filename='img/home-bg.jpg')}})">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading text-center">
+                    <h1>{{params['headname']}}</h1>
+                    <span class="subheading">Welcome! You are logged in.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% with messages=get_flashed_messages(with_categories=true) %}
+{% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+        {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Add Data</h2>
+    <form name="sentMessage" id="contactForm" action="/insert" method="post">
+        <div class="form-group">
+            <label for="mid">Medical ID</label>
+            <input type="number" name="mid" class="form-control" id="mid" placeholder="Enter medical ID" required>
+            <p class="help-block text-danger"></p>
+        </div>
+        <div class="form-group">
+            <label for="medical_name">Medical Shop Name</label>
+            <input type="text" name="medical_name" class="form-control" id="medical_name" placeholder="Enter medical name" required>
+            <p class="help-block text-danger"></p>
+        </div>
+        <div class="form-group">
+            <label for="owner_name">Owner Name</label>
+            <input type="text" name="owner_name" class="form-control" id="owner_name" placeholder="Enter owner name" required>
+            <p class="help-block text-danger"></p>
+        </div>
+        <div class="form-group">
+            <label for="phone_no">Phone Number</label>
+            <input type="number" name="phone_no" class="form-control" id="phone_no" placeholder="Enter phone number" required>
+            <p class="help-block text-danger"></p>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" name="address" class="form-control" id="address" placeholder="Enter address" required>
+            <p class="help-block text-danger"></p>
+        </div>
+        <br>
+        <div id="success"></div>
+        <div class="form-group text-center">
+            <button onclick="return confirm('Are you sure to insert data?');" type="submit" class="btn btn-primary btn-lg">Insert Data</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
